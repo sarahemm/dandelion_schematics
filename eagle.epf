@@ -364,6 +364,7 @@ UsedLibrary="/Users/sarahemm/Documents/Hackstrich SVN/lbr/con-sen.lbr"
 UsedLibrary="/Users/sarahemm/Documents/Hackstrich SVN/lbr/supply-sen.lbr"
 UsedLibrary="/Users/sarahemm/Documents/Hackstrich SVN/lbr/74xx-sen.lbr"
 UsedLibrary="/Users/sarahemm/Documents/Hackstrich SVN/lbr/vreg-sen.lbr"
+UsedLibrary="/Users/sarahemm/Documents/Hackstrich SVN/lbr/onsemi-sen.lbr"
 
 [Win_1]
 Type="Control Panel"
