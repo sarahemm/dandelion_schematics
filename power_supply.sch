@@ -22527,43 +22527,47 @@ OUT</text>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="60VAC-A-PREFUSE" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
 <pinref part="F1" gate="G$1" pin="1A"/>
 <wire x1="53.34" y1="243.84" x2="53.34" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="238.76" x2="60.96" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="238.76" x2="60.96" y2="228.6" width="0.1524" layer="91"/>
+<label x="52.832" y="235.966" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="60VAC-B-PREFUSE" class="0">
 <segment>
 <pinref part="F2" gate="G$1" pin="1A"/>
 <wire x1="60.96" y1="243.84" x2="60.96" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="241.3" x2="66.04" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="241.3" x2="66.04" y2="228.6" width="0.1524" layer="91"/>
+<label x="67.056" y="232.918" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="30VAC-A-PREFUSE" class="0">
 <segment>
 <pinref part="F3" gate="G$1" pin="1A"/>
 <wire x1="68.58" y1="243.84" x2="68.58" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="68.58" y1="241.3" x2="71.12" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="241.3" x2="71.12" y2="228.6" width="0.1524" layer="91"/>
+<label x="72.136" y="232.918" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="20VAC-A-PREFUSE" class="0">
 <segment>
 <pinref part="F5" gate="G$1" pin="1A"/>
 <wire x1="83.82" y1="243.84" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="5"/>
 <wire x1="83.82" y1="241.3" x2="81.28" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="241.3" x2="81.28" y2="228.6" width="0.1524" layer="91"/>
+<label x="81.026" y="234.696" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="20VAC-B-PREFUSE" class="0">
 <segment>
 <pinref part="F6" gate="G$1" pin="1A"/>
 <wire x1="91.44" y1="243.84" x2="91.44" y2="241.3" width="0.1524" layer="91"/>
@@ -22571,14 +22575,16 @@ OUT</text>
 <wire x1="86.36" y1="233.68" x2="86.36" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="241.3" x2="86.36" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="241.3" x2="86.36" y2="233.68" width="0.1524" layer="91"/>
+<label x="86.106" y="234.696" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="30VAC-B-PREFUSE" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="4"/>
 <wire x1="76.2" y1="241.3" x2="76.2" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="F4" gate="G$1" pin="1A"/>
 <wire x1="76.2" y1="243.84" x2="76.2" y2="241.3" width="0.1524" layer="91"/>
+<label x="77.216" y="232.918" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="PE" class="0">
@@ -22768,13 +22774,14 @@ OUT</text>
 <junction x="170.18" y="96.52"/>
 </segment>
 </net>
-<net name="C2+" class="0">
+<net name="20VAC-CT" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="7"/>
 <wire x1="91.44" y1="228.6" x2="91.44" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="238.76" x2="99.06" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="238.76" x2="99.06" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="+"/>
+<label x="91.186" y="233.426" size="0.635" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="S1" class="0">
@@ -23056,7 +23063,7 @@ OUT</text>
 <wire x1="17.78" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="TRAFO1" class="0">
+<net name="60VAC-A" class="0">
 <segment>
 <pinref part="F1" gate="G$1" pin="2A"/>
 <wire x1="53.34" y1="254" x2="53.34" y2="256.54" width="0.1524" layer="91"/>
@@ -23068,7 +23075,7 @@ OUT</text>
 <label x="93.98" y="127" size="1.27" layer="95" rot="MR180" xref="yes"/>
 </segment>
 </net>
-<net name="TRAFO2" class="0">
+<net name="60VAC-B" class="0">
 <segment>
 <pinref part="F2" gate="G$1" pin="2A"/>
 <wire x1="60.96" y1="254" x2="60.96" y2="256.54" width="0.1524" layer="91"/>
@@ -23182,7 +23189,7 @@ OUT</text>
 <wire x1="167.64" y1="185.42" x2="167.64" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="TRAFO4" class="0">
+<net name="30VAC-B" class="0">
 <segment>
 <pinref part="F4" gate="G$1" pin="2A"/>
 <wire x1="76.2" y1="256.54" x2="76.2" y2="254" width="0.1524" layer="91"/>
@@ -23194,7 +23201,7 @@ OUT</text>
 <label x="177.8" y="177.8" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="TRAFO3" class="0">
+<net name="30VAC-A" class="0">
 <segment>
 <pinref part="F3" gate="G$1" pin="2A"/>
 <wire x1="68.58" y1="254" x2="68.58" y2="256.54" width="0.1524" layer="91"/>
@@ -23317,6 +23324,20 @@ OUT</text>
 <wire x1="187.96" y1="185.42" x2="195.58" y2="185.42" width="0.1524" layer="91"/>
 <junction x="187.96" y="185.42"/>
 <label x="195.58" y="185.42" size="1.016" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="20VAC-A" class="0">
+<segment>
+<pinref part="F5" gate="G$1" pin="2A"/>
+<wire x1="83.82" y1="254" x2="83.82" y2="256.54" width="0.1524" layer="91"/>
+<label x="83.82" y="256.54" size="1.27" layer="95" rot="R90" xref="yes"/>
+</segment>
+</net>
+<net name="20VAC-B" class="0">
+<segment>
+<pinref part="F6" gate="G$1" pin="2A"/>
+<wire x1="91.44" y1="254" x2="91.44" y2="256.54" width="0.1524" layer="91"/>
+<label x="91.44" y="256.54" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>
