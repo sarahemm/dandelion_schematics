@@ -1,0 +1,58 @@
+#!/usr/bin/ruby
+
+# Fed a netlist export from EAGLE, will generate a starting point
+# for wiring harness documentation to paste into WordPress.
+
+# read the netlist into the nets hash
+net = nil
+nets = Hash.new
+STDIN.each_line do |line|
+  next if line.strip.length == 0
+  if(matches = /(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)\s+/.match(line)) then
+    next if matches[1] == 'Net'
+    net = matches[1]
+    part = matches[2]
+    pad = matches[3]
+    pin = matches[4]
+  elsif(matches = /(\S+)\s+(\S+)\s+(\S+)\s+(\S+)/.match(line)) then
+    part = matches[1]
+    pad = matches[2]
+    pin = matches[3]
+  else
+    puts "Unknown line format found: #{line}"
+  end
+  nets[net] = Array.new unless nets[net]
+  
+  nets[net].push [:part => part, :pin => (pin == "B" ? pad : pin)]
+end
+
+# run through the nets hash and turn it into a list of connectors/connections
+parts = Hash.new
+nets.each do |net, parts_info|
+  parts_info.each do |part|
+    part_name = part[0][:part]
+    pin = part[0][:pin].to_i
+    parts[part_name] = Array.new unless parts[part_name]
+    parts[part_name][pin] = nets[net]
+  end
+end
+
+# output the actual HTML documentation
+parts.sort.each do |part, pins|
+  puts "\n<h3>#{part}</h3>\n<ol>"
+  pins.each_index do |pin_number|
+    next if pin_number == 0
+    this_pin = pins[pin_number]
+    unless(this_pin) then
+      puts "<li>#{pin_number}: N/C</li>"
+      next
+    end
+    pin_info = Array.new
+    this_pin.each do |other_pin|
+      next if other_pin[0][:part] == part and other_pin[0][:pin].to_i == pin_number
+      pin_info.push "#{other_pin[0][:part]}-#{other_pin[0][:pin]}"
+    end
+    puts "<li>#{pin_number}: #{pin_info.join(", ")}</li>"
+  end
+  puts "</ol>"
+end
